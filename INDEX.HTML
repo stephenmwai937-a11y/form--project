@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Service Request Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 500px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .checkbox-group {
+      margin-bottom: 15px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+      display: block;
+    }
+
+    .radio-group {
+      margin-bottom: 15px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      background: #28a745;
+      color: white;
+    }
+
+    .reset-btn {
+      background: #dc3545;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="form-container">
+    <h2>Service Request Form</h2>
+
+    <form>
+
+      <!-- Full Name -->
+      <label>Full Name</label>
+      <input type="text" name="fullname" required>
+
+      <!-- Email -->
+      <label>Email Address</label>
+      <input type="email" name="email" required>
+
+      <!-- Phone -->
+      <label>Phone Number</label>
+      <input type="tel" name="phone" required>
+
+      <!-- Date of Birth -->
+      <label>Date of Birth</label>
+      <input type="date" name="dob" required>
+
+      <!-- Gender -->
+      <label>Gender</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
+
+      <!-- Services Required -->
+      <label>Services Required</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="services" value="Consultation"> Consultation</label>
+        <label><input type="checkbox" name="services" value="Laboratory Test"> Laboratory Test</label>
+        <label><input type="checkbox" name="services" value="Pharmacy"> Pharmacy</label>
+      </div>
+
+      <!-- County -->
+      <label>County of Residence</label>
+      <select name="county" required>
+        <option value="">-- Select County --</option>
+        <option value="Nairobi">Nairobi</option>
+        <option value="Kiambu">Kiambu</option>
+        <option value="Machakos">Machakos</option>
+        <option value="Kajiado">Kajiado</option>
+      </select>
+
+      <!-- Comments -->
+      <label>Additional Comments</label>
+      <textarea name="comments" rows="4" placeholder="Write your message..."></textarea>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="reset" class="reset-btn">Reset</button>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
